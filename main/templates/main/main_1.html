@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <title>WOM</title>
+  <link rel="stylesheet" href="{% static 'main/ss.css' %}">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  
+<header class="header">
+  <div class = 'bord'>
+    <div class="cont_int">
+      <div class="box">
+  <div class="container-1">
+      <span class="icon">
+      <input type="search" id="search" placeholder="  Поиск  ...  " />
+
+
+      <div class="wrapper">
+        <input type="checkbox" id="check-menu">
+        <label for="check-menu">КЛАССЫ </label>
+        <div class="burger-line first"></div>
+        <div class="burger-line second"></div>
+        <div class="burger-line third"></div>
+        <div class="burger-line fourth"></div>
+    
+        <nav class="main-menu">
+            {% for class in classes %}
+            <a href="#">{{class.name}}</a>
+            {% endfor %}
+        </nav>
+</div>
+</div>
+</div>
+    <div class="middle">
+     
+       
+      
+         <a class="button-hover" href="{% url 'cabinet'%}">Кабинет</a> 
+    </div>
+    
+</header>
+
+<div class="wel">
+<h3 class="forh">{{date.day}} - {{month_name}}</h3>
+
+
+</div>
+{% for class in classes %}
+<div id ="tl">
+ <div class="profile-img"></div>
+
+ 
+    
+    <a class="button-hovers" href="#">{{class.name}}
+    </a>
+
+  <div class="description">
+Присутсвует: {{counts}} из {{counts_all}}
+</div>
+ <div class="description">
+
+
+        Питается: {{counts_eat}} из {{counts_all}}
+</div>
+</div>
+{% endfor %}
+
+<div>
+   <script src="script.js">
+    
+   </script>
+</div>
+
+</body>
+</html>

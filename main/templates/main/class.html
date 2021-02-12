@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>{{user.username}}</h1>
+	{% for student in user.group.all %}
+	
+	<h3>{{student.first_name}} {{student.last_name}}</h3>
+	<a href="{% url 'days_plus' user.pk %}">
+		<button>
+			+
+		</button>
+	</a>
+	<h4>{{student.days}}</h4>
+	<h3>{{student.date_change}}</h3>
+	<h3>{{student.teacher.username}}</h3>
+	{% endfor %}
+	<h3>date: {{date}}</h3>
+	
+
+</body>
+</html>

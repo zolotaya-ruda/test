@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	{% load static %}
+  <meta charset="utf-8">
+	<title>WOM</title>
+	<link rel="stylesheet" href="{% static 'main/rdfv.css' %}">
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css ">
+</head> 
+<body>
+ 
+  
+ 
+
+</div>
+
+<header class="header">
+	<div class = 'bord'>
+		<div class="cont_int">
+
+      <div class="box">
+  <div class="container-1">
+      
+      <input type="search" id="search" placeholder="  Поиск по артистам ...  " />
+ 
+
+</div>
+</div>
+	 <div class="middle">
+     
+       <a class="button-hover" href="{% url 'main' %}">Главная</a> 
+      
+   </div>
+    
+    
+</header>
+<div class="wel">
+
+</div>
+
+<div class="card">
+  <div class="upper"></div>
+       <div class="profile-imgs"></div>
+       <div class="details">
+           &nbsp; <i class="fa fa-map-marker" aria-hidden="true"></i>London,UK.
+       </div>
+       <div class="item">
+        <span class="num">{{counts_all}}</span>
+        <span class="word">Ученика</span>
+       </div>
+       <h2>{{classes.name}}<h2>
+       <h3> {{user.first_name}} {{user.last_name}} </h3>
+       <h4>О себе</h4>
+       <p> {{user.about}}</p>
+        <div class="postbutton">
+    
+     
+  </div>
+</div>
+<div id ="tl">
+ <div class="profile-img"></div>
+
+ 
+    
+    <a class="button-hovers" href="{% url 'changing' %}">{{classes.name}}
+    </a>
+
+  <div class="description">
+Присутсвует: {{counts}} из {{counts_all}}
+</div>
+ <div class="description">
+
+
+        Питается: {{counts_eat}} из {{counts_all}}
+</div>
+
+
+</div>
+
+</body>
+</html>

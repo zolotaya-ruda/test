@@ -1,0 +1,383 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content:flex-end;
+	align-items: ;
+	background:linear-gradient(#b9b9b9,#ffffff);
+column-gap: 30px;
+ grid-row-gap: 60px;
+padding-top: 500px;
+ display: flex;
+  flex-direction: column-reverse;
+
+}
+
+.bord {
+	background-color: black;
+	border:1px solid white;
+  border-color: black;
+  height: 50px;
+
+	
+
+}
+
+
+
+
+
+.button-hover {
+  position: relative;
+  min-width: 160px;
+  margin: 7px;
+
+  left : -22px;
+  bottom:  -5px;
+  padding: 0.62em;
+  background: linear-gradient(to right,#e1e444,#d67dcb);
+  border: 0;
+  cursor: pointer;
+  border-radius: 20px;
+  display: inline;
+font-family: "Neuton", sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.button-hover:hover::before{
+  filter: blur(5px);
+}
+.button-hover:hover::after{
+  filter: blur(15px);
+}
+.button-hover:hover {
+  animation: hue 3s linear infinite;
+}
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+
+.navig{
+	position:absolute;
+	right:0px;
+}
+
+.header{
+	padding-top: 0px;
+	width: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+
+}
+
+.cont_int{
+
+	display:flex;
+	justify-content: space-between; 
+	align-items: center;
+}
+
+
+
+.nav_link{
+	padding-right: 50px;
+	font-size: 14px;
+	text-transform: uppercase;
+	
+	
+}
+
+
+
+
+.nava:hover {
+
+	color: #FF7687;
+
+}
+
+.box {
+
+
+   position: relative;
+   width: 320px;
+   height: 34px;
+   left: 80px;
+   top: 3px;
+   padding: 0.3em;
+  background: linear-gradient(#9a9a9a,#5bde70);
+   padding: 0.23em;
+    border: 0;
+    cursor: pointer;
+    border-radius: 20em;
+}
+.container-1 input#search{
+ position: relative;
+  width: 320px;
+  height: 34px;
+
+  border: none;
+  font-size: 10pt;
+  text-indent:10px;
+  float: right;
+  color: #f6f6f6;
+ 
+  background-color: #1a191a;
+
+  border-radius: 17em;
+transition: all .5s ease-in-out;
+
+
+}
+.box:hover::before{
+	filter: blur(5px);
+}
+.box:hover::after{
+	filter: blur(15px);
+}
+.box:hover {
+	animation: hue 3s linear infinite;
+}
+@keyframes hue {
+	0% {
+		filter: hue-rotate(0deg);
+	}
+	100% {
+		filter: hue-rotate(360deg);
+	}
+}
+.wrapper{
+    width: 124px;
+    left: 450px;
+     border-radius: 0.45em;
+    background: black;
+    position: relative;
+    color: white;
+    text-align: center;
+    height: 37px;
+    font-family: 'Arial';
+    font-size: 0.8em;
+    text-indent: -1.5em;
+    background-color: #414141;
+
+}
+
+#check-menu{
+    display: none;
+    right: 20px;
+    background-color: #595959;
+
+}
+
+label{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: ;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    line-height: 40px;
+}
+
+.burger-line{
+    position: absolute;
+    top: 8px;
+    right: 3px;
+    width: 30px;
+    height: 1.4px;
+    background-color: white;
+    transition: .5s all;
+
+}
+
+.second, .third{
+    top: 18px;
+}
+
+.fourth{
+    top: 28px;
+}
+
+.main-menu{
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+a{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,.3);
+    background-color: #000;
+}
+
+a:hover{
+    background-color: rgba(0,0,0,.9);
+}
+
+#check-menu:checked ~ .main-menu{
+    max-height: 500px;
+    font-size: 16px;
+}
+
+#check-menu:checked ~ .first{
+    display: none;
+}
+
+#check-menu:checked ~ .second{
+    transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third{
+    transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth{
+    display: none;
+}
+#tl{
+	
+height: 150px;
+  width: 910px;
+  border-radius: 5px;
+  bottom: 200px;
+   flex-direction: column;
+ position: relative;
+  background: white;
+ margin:0 auto;
+  box-shadow: 5px 10px 20px rgba(0,0,0,0.5);
+
+}
+ .profile-img {
+    height: 100px;
+    width: 100px;
+    background: 
+      url('https://hruschevka48.ru/storage/app/media/uploaded-files/7_YZNq-SEmo.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  }
+  .button-hovers{
+  position: relative;
+  width: 200px;
+  margin: 4px;
+  left :95px ;
+  bottom:  1px;
+  padding: 0.1em;
+  cursor: pointer;
+background: linear-gradient(to right,#e1e444,#d67dcb);
+  border: 0;
+  border-radius: 6px;
+   text-align: center;
+     font-size: 1.45rem;
+   color: white;
+font-family: "Alfa Slab One", sans-serif;
+}
+.button-hovers:hover::before{
+  filter: blur(5px);
+}
+.button-hovers:hover::after{
+  filter: blur(15px);
+}
+.button-hovers:hover {
+  animation: hue 3s linear infinite;
+}
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+audio {
+width: 46%;
+height: 40px;
+margin:8px 12% 0 8%;
+}
+
+
+.description{
+     text-indent:69px;
+     top: 10px;
+    margin-top:14px;
+     margin-left: 98px;
+  font-size: 1.2em;
+  
+  overflow:hidden;
+ text-align: justify;
+  cursor: pointer;
+   padding: 0.23em;
+    width:320px;
+    margin-right: 200px;
+    
+    cursor: pointer;
+    border-radius: 20em;
+    background: linear-gradient(to right,#5c5c5c,#282828);
+ 
+font-family: "Neuton", sans-serif;
+ color: white;
+  font-weight: bold;
+  }
+.forh{
+  margin: 
+  font-weight: normal;
+  font-size:20px;
+  color: #fff;
+margin-top:auto;
+margin-left:69px;
+text-align: justify;
+  font-family: "Alfa Slab One", sans-serif;
+  font-size: 3.7em;
+ position: absolute;
+ top: 59px;
+  overflow:hidden;
+  color: black;
+}
+
+  .like__btn {
+  padding: 10px 15px;
+  background: white;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
+  color: red;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 50px;
+
+}
+.add__btn{
+
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <title>WOM</title>
+  
+  <link rel="stylesheet" href="{% static 'main/cabinet.css' %}">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  
+  
+  
+</head>
+<body>
+  
+<header class="header">
+  <div class = 'bord'>
+    <div class="cont_int">
+      <div class="box">
+  <div class="container-1">
+      <span class="icon">
+      <input type="search" id="search" placeholder="  Поиск  ...  " />
+
+
+
+</div>
+</div>
+    <div class="middle">
+     
+       <a class="button-hover" href="{% url 'main' %}">Главная</a> 
+       <a class="button-hover" href="{% url 'cabinet' %}">Кабинет</a> 
+       <a class="button-hover" href="{% url 'add_student' %}">Добавить</a> 
+    
+    </div>
+    
+</header>
+
+      
+
+</div>
+{% for student in students %}
+<div id ="tl">
+
+<h3 class="forhdd">{{student.first_name}} {{student.last_name}}</h3>
+
+ 
+<div class="col-sm">
+        <div class="fruits">
+         
+          
+          <form>
+             <form class="like-form" method="POST">
+             
+             <a href="{% url 'minus' student.pk %}" type="button" class="btn btn-dark btn-sm btn-minus">-</a>
+             <input type="text" class="form-control form-control-sm input-field" value="{{student.days}}">
+          
+            
+             <a href="{% url 'plus' student.pk %}" type="button" class="btn btn-dark btn-sm btn-plus">+</a>
+
+            
+             <a href="{% url 'minus_day_eat' student.pk %}" type="button" class="btn btn-dark btn-sm btn-minus">-</a>
+             <input type="text" class="form-control form-control-sm input-field" value={{student.days_eat}}>
+             <a href="{% url 'plus_day_eat' student.pk %}" type="button" class="btn btn-dark btn-sm btn-plus">+</a>
+          </form>
+         
+        </div>
+      </div>
+    </div>
+
+{% endfor %}
+
+<div><script src="{% static 'main/cabinet.js' %}"></script></div>
+
+</body>
+</html>
